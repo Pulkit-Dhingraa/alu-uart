@@ -1,0 +1,19 @@
+================ PART 1: directed tests ================
+T1 ADD      PC sends [A5 05 03 00]            -> got [08 00]  expected [08 00]  OK
+T2 ADD ovf  PC sends [A5 7F 01 00]            -> got [80 0c]  expected [80 0c]  OK
+T3 junk     PC sends [33 77 A5 0A 03 01]      -> got [07 00]  expected [07 00]  OK
+T4 BAD_OP   PC sends [A5 01 02 10]            -> got [00 10]  expected [00 10]  OK
+T5a pause   PC sends [A5 06] wait [07 00]     -> got [0d 00]  expected [0d 00]  OK
+T5b timeout PC sends [A5 05] ... [A5 01 02 00] -> got [03 00]  expected [03 00]  OK
+T6 frame    PC sends [A5 05 03*] [A5 01 01 00] -> got [02 40]  expected [02 40]  OK
+T6b cleared PC sends [A5 01 01 00]            -> got [02 00]  expected [02 00]  OK
+T7 lost op  PC sends [A5 05 03][A5 01 01 00]  -> got [00 10]  expected [00 10]  OK
+T7b recover PC sends [A5 02 02 00]            -> got [04 00]  expected [04 00]  OK
+T8 overlap  PC sends [A5 10 20 00][A5 30 40 01] -> got [f0 05]  expected [f0 05]  OK
+Latency, last request byte received -> reply start bit: 530 ns (53 clocks)
+================ PART 2: 1000 random packets, back-to-back ================
+Random phase: 1000 packets (59 BAD_OP), reply rate measured = 2880.0 ops/s
+=========================================================
+Reply bytes expected 2024, received 2024, mismatches 0, bad stop bits 0
+RESULT: PASS
+tb/tb_top.v:227: $finish called at 358112387927 (1ps)

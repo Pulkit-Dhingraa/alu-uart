@@ -1,0 +1,8 @@
+------------------------------------------------
+tick16 period      : 54 clocks  (DIVISOR)
+one bit on wire    : 864 clocks = 8640 ns
+one frame (10 bits): 8640 clocks = 86.40 us
+bytes received     : 256 / 256
+errors             : 0
+RESULT             : PASS
+tb/tb_uart_loopback.v:71: $finish called at 22138455000 (1ps)

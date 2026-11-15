@@ -1,0 +1,2 @@
+alu vs alu_flat: 1048576 inputs, 0 differences -> PASS
+tb/tb_alu_flat_equiv.v:20: $finish called at 1048576000 (1ps)

@@ -1,0 +1,12 @@
+---- hand-picked examples ----
+  op=1  A=05  B=03  ->  result=02   C=0 Z=0 N=0 V=0
+  op=1  A=03  B=05  ->  result=fe   C=1 Z=0 N=1 V=0
+  op=0  A=7f  B=01  ->  result=80   C=0 Z=0 N=1 V=1
+  op=0  A=ff  B=01  ->  result=00   C=1 Z=1 N=0 V=0
+  op=d  A=80  B=01  ->  result=01   C=0 Z=0 N=0 V=0
+  op=e  A=80  B=01  ->  result=00   C=0 Z=1 N=0 V=0
+  op=8  A=81  B=01  ->  result=02   C=1 Z=0 N=0 V=0
+  op=a  A=80  B=09  ->  result=ff   C=1 Z=0 N=1 V=0
+---- exhaustive run ----
+Checked 1048576 vectors, 0 mismatches  ->  PASS
+tb/alu_tb.v:120: $finish called at 1048584000 (1ps)

@@ -1,0 +1,10 @@
+m100=-530  rx=290/300  bad=279  frame_err=10  FAIL
+m100=-525  rx=300/300  bad=0  frame_err=0  PASS
+m100=-500  rx=300/300  bad=0  frame_err=0  PASS
+m100=-400  rx=300/300  bad=0  frame_err=0  PASS
+m100=-200  rx=300/300  bad=0  frame_err=0  PASS
+m100=0  rx=300/300  bad=0  frame_err=0  PASS
+m100=200  rx=300/300  bad=0  frame_err=0  PASS
+m100=400  rx=300/300  bad=0  frame_err=0  PASS
+m100=455  rx=300/300  bad=0  frame_err=0  PASS
+m100=460  rx=18/300  bad=17  frame_err=281  FAIL
